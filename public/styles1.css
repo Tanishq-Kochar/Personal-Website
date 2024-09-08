@@ -1,0 +1,183 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: orange;
+    font-family: cursive;
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWh4M5nPPjkweU9wPWHcQfjl6OEE7gR4QsAA&s'); */
+    background-size: cover;
+}
+/* =====================================NAVBAR CSS========================================================= */
+.navbar{
+    border: 1px solid green;
+    clear: both;
+    background-color: white;
+    z-index: 1;
+}
+.nav-links{
+    width: 40%;
+    /* position: absolute; */
+    /* right: 10px; */
+    margin: auto;
+    /* top: 10px; */
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    color: red;
+}
+/* =====================================NAVBAR CSS========================================================= */
+
+/* =====================================Scroll Animation=================================================== */
+body,html,section{
+    block-size: 100%;
+}
+html{
+    scroll-snap-type: mandatory;
+}
+
+section{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section:nth-of-type(even){
+    color: black;
+    background-color: white;
+}
+
+section:nth-of-type(odd){
+    color: white;
+    background-color: black;
+}
+
+/* =====================================Scroll Animation=================================================== */
+
+/* =====================================Hero CSS=================================================== */
+.hero-section-heading{
+    font-size: 5rem;
+    text-shadow: 3px 5px 5px rgb(104, 91, 66); 
+}
+.hero-section-text{
+    font-size: 2rem;
+    margin:auto;
+}
+/* =====================================Hero CSS=================================================== */
+/* .about{
+    width: 100%;
+    height: 00px;
+    border: 1px solid black;  
+} */
+ .about{
+    width: 100%;
+    position: relative;
+ }
+.about-heading{
+    border: 1px solid red;
+    /* height: 10%; */
+    width: 100%;
+    font-size: 60px;
+    position: absolute;
+    top:20px;
+}
+.about-body{
+    position: absolute;
+    top: 140px;
+    left: 0px;
+    font-size: 35px;
+}
+
+/* =====================================Hero CSS=================================================== */
+/* =====================================Resume CSS=================================================== */
+#resume{
+    position: relative;
+}
+.education{
+    position: absolute;
+    top: 20px;
+    font-size: 35px;
+}
+.education h2{
+    font-size: 80px;
+}
+/* =====================================Resume CSS=================================================== */
+/* =====================================Prjects CSS=================================================== */
+#projects{
+    position: relative;
+    scroll-padding-block: auto;
+}
+.projects-heading{
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    font-size: 60px;
+}
+.projects-text{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    font-size: 40px;
+    margin-bottom: 40px;
+    border: 1px solid firebrick;
+}
+.projects-list{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    border: 1px solid green;
+    font-size: 35px;
+    top: 300px;
+}
+li{
+    margin-top: 15px;
+}
+/* =====================================Prjects CSS=================================================== */
+/* =====================================Contact CSS=================================================== */
+#contact{
+    position: relative;
+}
+.contact-head{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    top: 0px;
+    background-color: teal;
+    margin: auto;
+}
+.contact-head-text{
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    margin: auto;
+    font-size: 45px;
+}
+.socials{
+    font-size: 20px;
+    width: 100%;
+    height: 60%;
+    border: 1px solid red;
+    margin-top: 20%;
+    /* position: relative; */
+    background-color: white;
+}
+/* .socials-links:link{
+    text-decoration: none;
+} */
+.socials a:link,
+.socials a:visited{
+    text-decoration: none;
+    color: orange;
+}
+
+.socials a:hover{
+    z-index: 1;
+    text-shadow: 1px 2px 2px rgb(104, 91, 66);
+}
+
+.socials a:active{
+    color: black;
+}
+/* =====================================Contact CSS=================================================== */
