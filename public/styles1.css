@@ -1,69 +1,87 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    color: orange;
-    font-family: cursive;
-    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWh4M5nPPjkweU9wPWHcQfjl6OEE7gR4QsAA&s'); */
-    background-size: cover;
+* {
+  margin: 0px;
+  padding: 0px;
+  /* color: orange; */
+  font-family: cursive;
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWh4M5nPPjkweU9wPWHcQfjl6OEE7gR4QsAA&s'); */
+  background-size: cover;
 }
 /* =====================================NAVBAR CSS========================================================= */
-.navbar{
-    border: 1px solid green;
-    clear: both;
-    background-color: white;
-    z-index: 1;
+.navbar {
+  border: 1px solid green;
+  clear: both;
+  background-color: white;
+  z-index: 1;
+  width: 35%;
+  margin: auto;
+  border-radius: 100px;
+  background-color: black;
+  transition: background-color;
+  transition-duration: 1s;
 }
-.nav-links{
-    width: 40%;
-    /* position: absolute; */
-    /* right: 10px; */
-    margin: auto;
-    /* top: 10px; */
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    color: red;
+.nav-links {
+  width: 40%;
+  /* position: absolute; */
+  /* right: 10px; */
+  margin: auto;
+  /* top: 10px; */
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  color: red;
 }
 /* =====================================NAVBAR CSS========================================================= */
 
 /* =====================================Scroll Animation=================================================== */
-body,html,section{
-    block-size: 100%;
+body,
+html,
+section {
+  block-size: 100%;
 }
-html{
-    scroll-snap-type: mandatory;
+html {
+  scroll-snap-type: mandatory;
 }
 
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section:nth-of-type(even) {
+  color: black;
+  background-color: white;
+}
+
+section:nth-of-type(odd) {
+  color: white;
+  background-color: black;
+}
+
+/* =====================================Scroll Animation=================================================== */
 section{
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    align-content:center;
+    min-height: 100vh;
 }
-
-section:nth-of-type(even){
-    color: black;
-    background-color: white;
-}
-
-section:nth-of-type(odd){
-    color: white;
-    background-color: black;
-}
-
-/* =====================================Scroll Animation=================================================== */
-
 /* =====================================Hero CSS=================================================== */
-.hero-section-heading{
-    font-size: 5rem;
-    text-shadow: 3px 5px 5px rgb(104, 91, 66); 
+.hero {
+  height: 1000px;
+  background-image: url("https://w0.peakpx.com/wallpaper/47/200/HD-wallpaper-purple-spider-spiderweb-web.jpg");
 }
-.hero-section-text{
-    font-size: 2rem;
-    margin:auto;
+
+.hero-section-heading {
+  font-size: 5rem;
+  text-shadow: 3px 5px 5px rgb(104, 91, 66);
+}
+.hero-section-text {
+  font-size: 2rem;
+  margin: auto;
 }
 /* =====================================Hero CSS=================================================== */
 /* .about{
@@ -71,113 +89,131 @@ section:nth-of-type(odd){
     height: 00px;
     border: 1px solid black;  
 } */
- .about{
-    width: 100%;
-    position: relative;
- }
-.about-heading{
-    border: 1px solid red;
-    /* height: 10%; */
-    width: 100%;
-    font-size: 60px;
-    position: absolute;
-    top:20px;
+#about {
+  width: 100%;
+  position: relative;
+  background-color: #e0f7fa;
+  color: #004d40;
 }
-.about-body{
-    position: absolute;
-    top: 140px;
-    left: 0px;
-    font-size: 35px;
+.about-heading {
+  /* border: 1px solid red; */
+  /* height: 10%; */
+  width: 100%;
+  font-size: 60px;
+  position: absolute;
+  top: 150px;
+}
+.about-body {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  font-size: 25px;
 }
 
 /* =====================================Hero CSS=================================================== */
 /* =====================================Resume CSS=================================================== */
-#resume{
-    position: relative;
+#resume {
+  position: relative;
+  background-color: #FF6F61;
+  color: #FFFFF0;
+  height: 1000px;
 }
-.education{
-    position: absolute;
-    top: 20px;
-    font-size: 35px;
+.education {
+  position: absolute;
+  top: 20px;
+  font-size: 35px;
 }
-.education h2{
-    font-size: 80px;
+.education h2 {
+  font-size: 80px;
 }
 /* =====================================Resume CSS=================================================== */
 /* =====================================Prjects CSS=================================================== */
-#projects{
-    position: relative;
-    scroll-padding-block: auto;
+#projects {
+  position: relative;
+  scroll-padding-block: auto;
+  min-height: 1000px;
+  background-color: #00BFFF;
+  color: #FFFFFF;
 }
-.projects-heading{
-    width: 100%;
-    position: absolute;
-    top: 30px;
-    font-size: 60px;
+.ongoing{
+    font-size: 50px;
+    text-decoration: underline;
 }
-.projects-text{
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    font-size: 40px;
-    margin-bottom: 40px;
-    border: 1px solid firebrick;
+.projects-heading {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  font-size: 60px;
 }
-.projects-list{
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    border: 1px solid green;
-    font-size: 35px;
-    top: 300px;
+.projects-text {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  font-size: 40px;
+  margin-bottom: 40px;
+  /* border: 1px solid firebrick; */
 }
-li{
-    margin-top: 15px;
+.projects-list {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  /* border: 1px solid green; */
+  font-size: 35px;
+  top: 300px;
+}
+li {
+  margin-top: 15px;
 }
 /* =====================================Prjects CSS=================================================== */
 /* =====================================Contact CSS=================================================== */
-#contact{
-    position: relative;
+#contact {
+  position: relative;
+  background-color: #FF5733;
+  color: #F8F9F9;
+  width: 100%;
+  height: 100px;
 }
-.contact-head{
-    position: absolute;
-    width: 100%;
-    height: 40%;
-    top: 0px;
-    background-color: teal;
-    margin: auto;
+.contact-head {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  top: 0px;
+  /* background-color: teal; */
+  margin: auto;
 }
-.contact-head-text{
-    position: absolute;
-    top: 45%;
-    left: 15%;
-    margin: auto;
-    font-size: 45px;
+.contact-head-text {
+  position: absolute;
+  top: 45%;
+  left: 15%;
+  margin: auto;
+  font-size: 45px;
 }
-.socials{
-    font-size: 20px;
-    width: 100%;
-    height: 60%;
-    border: 1px solid red;
-    margin-top: 20%;
-    /* position: relative; */
-    background-color: white;
+.socials {
+  font-size: 30px;
+  width: 1500px;
+  height: 30%;
+  /* border: 1px solid red; */
+  margin-top: 20%;
+  /* position: relative; */
+  /* background-color: white; */
+  display: flex;
+  justify-content: space-evenly;
 }
 /* .socials-links:link{
     text-decoration: none;
 } */
 .socials a:link,
-.socials a:visited{
-    text-decoration: none;
-    color: orange;
+.socials a:visited {
+  text-decoration: none;
+  color: #F8F9F9;
 }
 
-.socials a:hover{
-    z-index: 1;
-    text-shadow: 1px 2px 2px rgb(104, 91, 66);
+.socials a:hover {
+  z-index: 10;
+  text-shadow: 6px 6px 6px rgb(104, 91, 66);
 }
 
-.socials a:active{
-    color: black;
+.socials a:active {
+  color: black;
 }
 /* =====================================Contact CSS=================================================== */
