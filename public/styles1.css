@@ -8,16 +8,16 @@
 }
 /* =====================================NAVBAR CSS========================================================= */
 .navbar {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   clear: both;
-  background-color: white;
+  /* background-color: white; */
   z-index: 1;
   width: 35%;
   margin: auto;
   border-radius: 100px;
   background-color: black;
   transition: background-color;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 .nav-links {
   width: 40%;
@@ -32,6 +32,15 @@
   color: red;
 }
 /* =====================================NAVBAR CSS========================================================= */
+/* =====================================Coming On Page Animation========================================================= */
+@keyframes coming-on-page {
+    from{
+        transform: scale(0);
+    }to{
+        transform: scale(1);
+    }
+}
+/* =====================================Coming On Page Animation========================================================= */
 
 /* =====================================Scroll Animation=================================================== */
 body,
@@ -94,6 +103,7 @@ section{
   position: relative;
   background-color: #e0f7fa;
   color: #004d40;
+  transition-duration: 10s;
 }
 .about-heading {
   /* border: 1px solid red; */
@@ -114,7 +124,7 @@ section{
 /* =====================================Resume CSS=================================================== */
 #resume {
   position: relative;
-  background-color: #FF6F61;
+  background-color: #1ABC9C;
   color: #FFFFF0;
   height: 1000px;
 }
@@ -168,13 +178,19 @@ li {
 /* =====================================Contact CSS=================================================== */
 #contact {
   position: relative;
-  background-color: #FF5733;
+  background-color: #8A2BE2;
   color: #F8F9F9;
   width: 100%;
   height: 100px;
+  /* visibility: hidden; */
+  transition-duration: 2s;
+}
+#contact:hover{
+    visibility: visible;
 }
 .contact-head {
   position: absolute;
+  visibility: hidden;
   width: 100%;
   height: 40%;
   top: 0px;
@@ -189,6 +205,7 @@ li {
   font-size: 45px;
 }
 .socials {
+    visibility: hidden;
   font-size: 30px;
   width: 1500px;
   height: 30%;
@@ -198,10 +215,14 @@ li {
   /* background-color: white; */
   display: flex;
   justify-content: space-evenly;
+  transition: 3s;
 }
 /* .socials-links:link{
     text-decoration: none;
 } */
+ #contact:hover .socials,.contact-head-text{
+    visibility: visible;
+ }
 .socials a:link,
 .socials a:visited {
   text-decoration: none;
@@ -217,3 +238,11 @@ li {
   color: black;
 }
 /* =====================================Contact CSS=================================================== */
+.hidden{
+    visibility: hidden;
+}
+.show{
+    /* visibility: show; */
+    animation-name: coming-on-page;
+    animation-duration:3s;
+}
